@@ -30,7 +30,7 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: "src/**/*.js"
+          - src: "src/**/*.ts"
             dest: .
     - image: jatin10e7/orders
       context: orders
@@ -38,5 +38,13 @@ build:
         dockerfile: Dockerfile
       sync:
         manual:
-          - src: "src/**/*.js"
+          - src: "src/**/*.ts"
+            dest: .
+    - image: jatin10e7/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
             dest: .
