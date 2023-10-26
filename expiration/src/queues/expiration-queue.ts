@@ -12,7 +12,7 @@ const expirationQueue = new Queue<Payload>("order:expiration", {
 });
 
 expirationQueue.process(async (job) => {
-  console.log("Processing Job after 1min delay", job);
+  console.log("-----------Processing Job after 1min delay-----------");
   new ExpirationCompletePublisher(natsWrapper.client).publish({
     orderId: job.data.orderId,
   });
