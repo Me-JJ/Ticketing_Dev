@@ -42,7 +42,7 @@ router.post(
       automatic_payment_methods: { enabled: true, allow_redirects: "never" },
     });
 
-    console.log("paymentIntent->", paymentIntent);
+    console.log("paymentIntent->", paymentIntent.status);
 
     const payment = Payment.build({
       orderId,
